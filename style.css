@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+.header {
+  padding: 5px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.leftcolumn {
+  float: left;
+  width: 40%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 60%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="checkbox"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.submit {
+  width: 100%;
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #ccc;
+}
+
+.contentcollapsible {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  height: 270px;
+  overflow: scroll;
+}
+
+.collapsible:after {
+  content: "\02795";
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796";
+}
+
+.contentcollapsible > .book_list > .book_item > .sideleft {
+  float: left;
+  width: 70%;
+}
+
+.contentcollapsible > .book_list > .book_item > .sideright {
+  float: left;
+  width: 30%;
+}
+
+.contentcollapsible > .book_list > .book_item > .sideright > .action > button {
+  border: none;
+  padding: 5px 10px;
+  width: 130px;
+  margin: 0 5px 0 0;
+  border-radius: 2px;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.contentcollapsible > .book_list > .book_item > .sideright > .action > .primary {
+  background-color: #4caf50;
+}
+
+.contentcollapsible > .book_list > .book_item > .sideright > .action > .danger {
+  background-color: #f44336;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn,
+  .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+
+  .contentcollapsible > .book_list > .book_item > .sideright > .action > button {
+    padding: 5px 5px;
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card a {
+    float: none;
+    width: 100%;
+  }
+
+  .contentcollapsible > .book_list > .book_item > .sideright,
+  .contentcollapsible > .book_list > .book_item > .sideleft {
+    width: 100%;
+    padding: 0;
+    display: block;
+    font-size: 10pt;
+  }
+
+  .contentcollapsible > .book_list > .book_item > .sideright .action > button {
+    width: 85px;
+    font-size: 8pt;
+  }
+
+  .card .inputSrc {
+    width: 80%;
+  }
+
+  .card .btnSrc {
+    width: 20%;
+  }
+}
